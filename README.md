@@ -1,7 +1,3 @@
-Sure! Here's a README format for setting up an ODBC DSN on a Windows 64-bit architecture:
-
----
-
 # Setting Up an ODBC DSN on Windows 64-bit
 
 This guide provides step-by-step instructions to set up an ODBC Data Source Name (DSN) on a Windows 64-bit system.
