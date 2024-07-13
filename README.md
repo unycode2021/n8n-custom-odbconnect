@@ -41,18 +41,8 @@ This guide provides step-by-step instructions to set up an ODBC Data Source Name
 1. After configuring the DSN, look for a `Test Connection` button in the setup window.
 2. Click `Test Connection` to ensure the DSN can successfully connect to the database.
 3. If the test is successful, click `OK` to save the DSN.
-
-### Step 6: Save and Close
-
-1. Click `OK` in the ODBC Data Source Administrator window to save your changes and close the application.
-
-## Verification
-
-1. To verify the DSN, you can use an ODBC-enabled application or tool (e.g., Excel, Access, custom applications) to connect to the database using the newly created DSN.
-
 ---
-
-This guide covers the essential steps to set up an ODBC DSN on a Windows 64-bit system. For specific database drivers, refer to the corresponding documentation for detailed configuration options.
+***
 
 ### This node uses node-odbc to connect to DSN ###
 # This can only be used on a self-hosted n8n instance
