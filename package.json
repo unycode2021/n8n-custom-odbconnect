@@ -1,0 +1,61 @@
+{
+  "name": "n8n-custom-odbconnect",
+  "version": "0.1.0",
+  "description": "Connect to and return result from ODBC data source",
+  "main": "index.ts",
+  "scripts": {
+    "preinstall": "npx only-allow npm",
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint nodes package.json",
+    "lintfix": "eslint nodes package.json --fix",
+    "prepublishOnly": "npm build && npm lint -c .eslintrc.prepublish.js nodes package.json"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unycode2021/n8n-custom-odbconnect.git"
+  },
+  "keywords": [
+    "ODBC",
+    "connect",
+    "mdb",
+    "access",
+    "database"
+  ],
+  "author": "Unycode Limited",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unycode2021/n8n-custom-odbconnect/issues"
+  },
+  "homepage": "https://github.com/unycode2021/n8n-custom-odbconnect#readme",
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/ODBConnect/ODBConnect.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "*",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "node-odbc": "^0.2.10",
+    "odbc": "^2.4.8"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
