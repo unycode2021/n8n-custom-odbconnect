@@ -71,15 +71,17 @@ export class ODBConnect implements INodeType {
         try {
             const connection = await ADODB.connect(connectionString);
             const result = await connection.query(query);
+            const results:Array<any> = []
             result.forEach((record: any) => {
               if (record.ID && record.Photo) {
                 // Convert the binary data to Buffer
                 const buffer = Buffer.from(record.Photo);
                 const base64String = buffer.toString("base64");
                 record.Photo = base64String;
-              }
+                }
+                results.push(record)
             });
-            return this.prepareOutputData(this.helpers.returnJsonArray(result));
+            return this.prepareOutputData(this.helpers.returnJsonArray(results));
         } catch (error) {
             throw new Error('Failed to execute query.');
         }
